@@ -7,7 +7,7 @@ const enrollInCourse = async (req, res) => {
       if (!course) {
         return res.status(404).json({ error: 'Course not found' });
       }
-      const user = await User.findById(req.userId);
+      const user = await User.findById(req.body.userId);
       if (user.enrolledCourses.includes(course._id)) {
         return res.status(400).json({ error: 'Already enrolled in this course' });
       }

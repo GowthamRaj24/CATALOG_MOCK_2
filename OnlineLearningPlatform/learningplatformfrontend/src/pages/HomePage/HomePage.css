@@ -1,0 +1,24 @@
+.homepage {
+    background-color: #f8f9fa;
+    padding-bottom: 50px;
+}
+
+.homepage .display-4 {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.homepage .lead {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+.homepage .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.homepage .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
