@@ -1,4 +1,5 @@
 const Course = require('../../models/courseSchema');
+const User = require('../../models/userSchema');
 
 const enrollInCourse = async (req, res) => {
     try {
@@ -10,12 +11,13 @@ const enrollInCourse = async (req, res) => {
       if (user.enrolledCourses.includes(course._id)) {
         return res.status(400).json({ error: 'Already enrolled in this course' });
       }
-      user.enrolledCourses.push(course._id);
+      user.enrolledCourses.push(id);
       course.enrolledStudents.push(user._id);
       await user.save();
       await course.save();
       res.json({ message: 'Enrolled successfully' });
     } catch (error) {
+        console.log(error);
       res.status(500).json({ error: 'Failed to enroll in course' });
     }
   };
