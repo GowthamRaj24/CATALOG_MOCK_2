@@ -1,8 +1,10 @@
 const express = require("express");
 const cors = require("cors");
+const connect = require("./db");
 
 const app = express();
 const port = 4001;
+connect.connect();
 
 app.use(express.json());
 app.use(cors({
@@ -16,5 +18,5 @@ app.get("/", (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`listening on port ${port}`);
 });
