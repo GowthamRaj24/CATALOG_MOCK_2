@@ -2,12 +2,15 @@ const Course = require('../../models/courseSchema');
 
 const getCourseById = async (req, res) => {
     try {
-      const course = await Course.findById(req.params.courseId).populate('instructor', 'username');
-      if (!course) {
+    console.log(req.params.id);
+    const course = await Course.findById(req.params.id);
+    console.log("Courses fetched" +course);
+    if (!course) {
         return res.status(404).json({ error: 'Course not found' });
-      }
+    }
       res.json(course);
     } catch (error) {
+        console.log(error);
       res.status(500).json({ error: 'Failed to fetch course' });
     }
   };

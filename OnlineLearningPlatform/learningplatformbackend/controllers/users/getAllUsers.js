@@ -1,4 +1,4 @@
-const usersSchema = require("../../models/usersSchema");
+const usersSchema = require("../../models/userSchema");
 const getAllUsers = async(req , res) => {
     try{
     const data = await usersSchema.find();

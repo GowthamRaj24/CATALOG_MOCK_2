@@ -1,9 +1,9 @@
 const express = require('express');
-const router = express.Router();
+const routes = express.Router();
 const updateProgress = require("../controllers/progress/updateProgress");
 const getProgress = require("../controllers/progress/getProgress");
 
-router.post('/update', updateProgress.updateProgress);
-router.get('/:courseId', getProgress.getProgress);
+routes.post('/update', updateProgress.updateProgress)
+    .get('/:courseId', getProgress.getProgress);
 
-exports.route = router;
+exports.route = routes;
