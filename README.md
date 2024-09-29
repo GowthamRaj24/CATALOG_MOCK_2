@@ -1,13 +1,20 @@
-**ONLINE LEARNING PLATFORM**
-**CATALOG_MOCK_2**
+#  Online Learning Platform
 
-Backend Completed
-Frontend (Working On)
+## Features
 
-For API Testing : PostMan\n
- Styling : Bootstrap\n
- Frontend : React\n
- DataBase : MongoDB\n
- Two Step Authentication : Sends OTP to your mail.\n
- Security : Hashed Password will be stored in the DataBase , A Token will be stored in Local Storage for Authentication of Loggedin user.\n
- Different Landing Pages for different Roles of the user.(Instructor , Student)\n
+- **User Roles:** Separate landing pages for **Instructors** and **Students**.
+- **Two-Step Authentication:** Secure OTP sent to registered email for login.
+- **Hashed Passwords:** Passwords are securely hashed before being stored in the database.
+- **Token-Based Authentication:** User sessions are authenticated using tokens stored in local storage.
+- **API Testing:** Integrated with Postman for API testing.
+- **Responsive Design:** Styled using Bootstrap to ensure responsiveness across devices.
+
+------
+
+## Tech Stack
+
+- **Frontend:** React, Bootstrap
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (NoSQL)
+- **API Testing:** Postman
+- **Security:** Bcrypt for password hashing, JWT for token-based authentication
