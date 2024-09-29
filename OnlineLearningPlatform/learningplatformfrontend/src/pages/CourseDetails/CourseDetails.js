@@ -23,6 +23,16 @@ const CourseDetails = () => {
     fetchCourse();
   }, []);
 
+
+  const handleEnroll = async () => {
+    try {
+      await axios.post('http://localhost:4001/courses/enroll/'+id);
+      console.log('Enrollment successful');
+    } catch (error) {
+      console.error('Failed to enroll:', error);
+    }
+  };
+
   if (!course) return (<><Container className="mt-5"><h2>Loading...</h2></Container></>);
 
   return (
@@ -43,7 +53,7 @@ const CourseDetails = () => {
               </ListGroup.Item>
             ))}
           </ListGroup>
-          <Button variant="success" className="mt-3" block>Enroll in Course</Button>
+          <Button variant="success" className="mt-3" onClick={handleEnroll} block>Enroll in Course</Button>
         </Col>
       </Row>
     </Container>

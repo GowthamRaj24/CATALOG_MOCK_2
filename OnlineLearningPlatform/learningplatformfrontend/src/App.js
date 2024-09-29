@@ -1,6 +1,8 @@
 import { BrowserRouter , Routes , Route } from "react-router-dom"
 import HomePage from "./pages/HomePage/HomePage";
+// @ts-ignore
 import Login from "./pages/loginPage/loginPage";
+// @ts-ignore
 import Navbar from "./components/Navbar/Navbar";
 import SignupPage from "./pages/signupPage/signupPage";
 import CourseList from "./pages/CourseList/CourseList";
